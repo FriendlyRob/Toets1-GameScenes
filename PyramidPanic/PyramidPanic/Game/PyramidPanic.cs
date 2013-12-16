@@ -36,6 +36,9 @@ namespace PyramidPanic
         // Maak een variabele aan van het type ScoresScene
         private ScoresScene scoresScene;
 
+        // Maak een variabele aan van het type QuitScene
+        private QuitScene quitScene;
+
         // Maak een variabele aan van het type IState
         private IState iState;
 
@@ -88,6 +91,13 @@ namespace PyramidPanic
         public ScoresScene ScoresScene
         {
             get { return this.scoresScene; }
+        }
+
+        // Maak het field this.quitScene beschikbaar buiten de class d.m.v. een
+        // property QuitScene
+        public QuitScene QuitScene
+        {
+            get { return this.quitScene; }
         }
 
         // Maak het field this.spritebatch beschikbaar buiten de class d.m.v. een
@@ -153,6 +163,10 @@ namespace PyramidPanic
             // We maken nu het object/instantie aan van het type scoresScene. Dit doe je door
             // de constructor aan te roepen van de scoresscene class.
             this.scoresScene = new ScoresScene(this);
+
+            // We maken nu het object/instantie aan van het type quitScene. Dit doe je door
+            // de constructor aan te roepen van de quitScene class.
+            this.quitScene = new QuitScene(this);
             
             this.iState = this.startScene;
         }
